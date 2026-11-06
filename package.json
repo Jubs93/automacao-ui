@@ -1,0 +1,15 @@
+{
+  "name": "hub-leitura-ui",
+  "version": "1.0.0",
+  "description": "modulo 11 e 12 do curso EBAC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^16.2.1"
+  }
+}
