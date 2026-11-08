@@ -6,7 +6,7 @@ describe('catalogo de livros', () => {
     cy.visit('catalog.html')
   });
   
-  it.skip('adicionar livros a cesta', () => {
+  it('adicionar livros a cesta', () => {
    cy.get(':nth-child(1) > .card > .card-body > .mt-auto > .d-grid > .btn-primary').click()
    cy.get('#cart-count').should('contain', 1)
   })
