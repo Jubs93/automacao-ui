@@ -25,5 +25,14 @@ it('Usuário deve logar com sucesso admin', () => {
     cy.login(user.email, user.senha)
   })
 
-  
+  it.only('O utilizador deve logar com todos os usuários', () => {
+     cy.fixture('usuario').then((login) =>{
+      login.forEach(user => {
+        cy.get('#email').clear().type(user.email)    
+        cy.get('#password').clear().type(user.senha)    
+      })    
+        
+    })
+  })
+
   })

@@ -17,6 +17,22 @@ cy.get('#search-input').type(colecao[0].livro)
 cy.get('.card-title').should('contain', colecao[0].livro)
 })
 
+it('Deve buscar livro usando fixture', () => {
+    cy.fixture('livros').then((cat) =>{
+        cy.get('#search-input').type(cat[1].livro)
+        cy.get('.card-title').should('contain', cat[1].livro)
 
+    })
+ })
+
+it('Deve validar todos os livros', () => {
+ cy.fixture('livros').then((cat) =>{
+    cat.forEach(item => {
+        cy.get('#search-input').clear().type(item.livro)
+        cy.get('.card-title').should('contain', item.livro) 
+ })    
+        
+ })
+})
 
 })

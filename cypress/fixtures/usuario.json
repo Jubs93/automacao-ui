@@ -1,4 +1,10 @@
+[
+  {
+  "email": "admin@biblioteca.com",
+  "senha": "admin123"
+  },
 {
   "email": "usuario@teste.com",
-  "senha": "huser123"
+  "senha": "user123"
   }
+]
