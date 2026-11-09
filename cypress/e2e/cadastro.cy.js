@@ -10,6 +10,7 @@ describe('cadastro', () => {
   
   it('Deve fazer cadastro com sucesso, função let', () => {
     let email = `teste${Date.now()}@teste.com`
+    
    cy.get('#name').type(nome)
     cy.get('#email').type(email)
     cy.get('#phone').type(telefone)
