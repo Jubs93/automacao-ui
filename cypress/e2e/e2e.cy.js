@@ -27,13 +27,13 @@ describe('Fluxo End-to-End de Utilizador', () => {
 
     
     cy.get('.user-actions > .btn-outline-danger').click(); 
-    cy.visit('login.html'); 
+    cy.location('pathname').should('eq', '/login.html');
 
     
     cy.login(email, senha);
 
     
-    cy.url().should('contain', 'dashboard');
+    cy.url().should('contain', '/dashboard.html');
   });
 
 });
